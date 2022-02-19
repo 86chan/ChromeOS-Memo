@@ -64,7 +64,7 @@
   
     start on : 開始するイベント  
     stop on : 停止するイベント  
-    pre-start script : メインの処理前の準備処理等
+    pre-start script : メインの処理前の準備処理等  
 
 - ファイアウォールについて
   ファイアウォールの管理はiptablesを採用しているが、```/etc/sysconfig/iptables```等に設定ファイルが用意されていない。  
