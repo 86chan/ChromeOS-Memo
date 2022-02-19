@@ -66,8 +66,10 @@
     stop on : 停止するイベント  
     pre-start script : メインの処理前の準備処理等  
 
-- ファイアウォールについて
-  ファイアウォールの管理はiptablesを採用しているが、```/etc/sysconfig/iptables```等に設定ファイルが用意されていない。  
+## ファイアウォール管理
+
+- ファイアウォールの管理はiptablesを採用している  
+  ```/etc/sysconfig/iptables```等に設定ファイルが用意されていない。  
   ```/etc/init/iptables.conf```に記載され、Upstartで設定している模様。  
   なのでこのファイルに追記するか同様に別途作成する。  
   /etc/init/iptables.conf
@@ -133,16 +135,18 @@
   end script
   ```
 
-- sshdについて  
-  システム標準が存在している。 ```/usr/sbin/sshd```  
+## sshd  
+
+- システム標準が存在している  
+  ```/usr/sbin/sshd```  
   開始する前に鍵の生成と設定の変更が必要  
-  (更にファイアウォール設定が必要)
+  (更にファイアウォール設定が必要)  
 
   ``` sh
   localhost ~ # ssh-keygen -A
   ```
 
-  /etc/ssh/sshd_config
+  /etc/ssh/sshd_config  
   
   ```sh sshd_config
   # Force protocol v2 only
