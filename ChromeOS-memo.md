@@ -172,5 +172,3 @@
   # Ignore temporary network outages.
   TCPKeepAlive no
   ```
-
-
